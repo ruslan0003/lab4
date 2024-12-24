@@ -1,0 +1,12 @@
+version: '3'
+services:
+  nginx:
+    image: ruslan0003/my-nginx:latest
+    ports:
+      - "8081:80"
+    depends_on:
+      - wsgi
+  wsgi:
+    image: ruslan0003/my-wsgi:latest
+    ports:
+      - "8082:80"
